@@ -63,7 +63,7 @@ if node['openssh']['listen_interfaces']
     end
   end
 
-  node.set['openssh']['server']['listen_address'] = listen_addresses
+  node.override['openssh']['server']['listen_address'] = listen_addresses
 end
 
 sorted_server ||= Hash.new
